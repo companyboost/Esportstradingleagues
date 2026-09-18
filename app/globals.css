@@ -35,7 +35,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:var(--nav)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 ul{list-style:none}
@@ -476,7 +476,7 @@ div.row .go{opacity:1;transform:none}
 .loop.swap{opacity:0;transform:translateY(8px)}
 
 /* ---------- Grid backdrop on page headers ---------- */
-.section.first{position:relative;isolation:isolate;overflow:hidden}
+.section.first{position:relative;isolation:isolate;overflow:clip}
 .section.first::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;
   -webkit-mask-image:radial-gradient(90% 60% at 80% 0%,#000 0%,transparent 75%);mask-image:radial-gradient(90% 60% at 80% 0%,#000 0%,transparent 75%)}
@@ -551,4 +551,17 @@ div.row .go{opacity:1;transform:none}
   .hero-cta .btn,.cta .actions .btn{flex:1 1 100%}
   .fpanel{border-radius:20px}
   .nav .logo-img{height:22px}
+}
+
+/* ---------- Sticky left column, site-wide ----------
+   Wherever a section has a shorter left column beside a taller right one, the left
+   side stays in view below the navbar while the right side scrolls past:
+   the formula card, the "Match week" text, and the left titles of .sub blocks.
+   `.formula .formula-card` carries extra class weight to beat `.glow{position:relative}`;
+   sticky still anchors the glow layer. */
+@media (min-width:961px){
+  .formula .formula-card,
+  .split>:first-child,
+  .sub>h3{position:sticky;top:calc(var(--nav) + 24px);align-self:start}
+  .split{align-items:start}
 }
