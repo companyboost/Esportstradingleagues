@@ -30,13 +30,8 @@ export function HeroVideo() {
           className={playing ? "on" : undefined}
           src="/media/hero.mp4"
           muted loop playsInline autoPlay preload="auto" aria-hidden="true" tabIndex={-1}
+          // the clip's last frame crossfades into its first, so it loops without a cut
           onPlaying={() => setPlaying(true)}
-          onTimeUpdate={(e) => {
-            // soften the loop point: dip to the still image for a moment
-            const v = e.currentTarget;
-            if (!v.duration) return;
-            v.style.opacity = v.currentTime < 0.35 || v.duration - v.currentTime < 0.45 ? "0" : "";
-          }}
         />
       )}
     </div>
