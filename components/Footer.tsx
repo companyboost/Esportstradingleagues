@@ -55,7 +55,7 @@ export function Footer() {
             <span>Trading involves risk of capital loss.</span>
             <a href="#top">Back to top ↑</a>
           </div>
-          <div className="fbig"><span className="logo-img" role="img" aria-label="Esports Trading" /></div>
+          <div className="fbig"><span className="logo-img" role="img" aria-label="Esports Trading League" /></div>
         </div>
       </div>
     </footer>

@@ -57,12 +57,12 @@ h3{font-size:clamp(20px,2vw,28px);letter-spacing:-.01em;line-height:1.1}
 .muted{color:var(--muted)}
 
 /* ---------- Logo (image) ---------- */
-.logo-img{display:block;aspect-ratio:5258/693;background:var(--logo) no-repeat center/contain}
+.logo-img{display:block;aspect-ratio:5300/693;background:var(--logo) no-repeat center/contain}
 
 /* ---------- Header ---------- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(14,14,14,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--nav);gap:24px}
-.nav .logo-img{height:27px}
+.nav .logo-img{height:34px}
 .menu{display:flex;gap:4px}
 .menu a{padding:8px 12px;font-size:14px;color:var(--muted);border-radius:4px;transition:color .2s,background .2s;white-space:nowrap}
 .menu a:hover,.menu a.on{color:var(--text)}
@@ -550,7 +550,7 @@ div.row .go{opacity:1;transform:none}
   th,td{padding:13px 14px;font-size:14px}
   .hero-cta .btn,.cta .actions .btn{flex:1 1 100%}
   .fpanel{border-radius:20px}
-  .nav .logo-img{height:22px}
+  .nav .logo-img{height:28px}
 }
 
 /* ---------- Sticky left column, site-wide ----------

@@ -22,7 +22,7 @@ export function Nav() {
     <header className="nav">
       <div className="wrap">
         <Link href="/" aria-label="Esports Trading home">
-          <span className="logo-img" role="img" aria-label="Esports Trading" />
+          <span className="logo-img" role="img" aria-label="Esports Trading League" />
         </Link>
         <nav className={`menu${open ? " open" : ""}`} id="menu" aria-label="Primary">
           {LINKS.map((l) => (
