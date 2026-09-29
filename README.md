@@ -47,8 +47,8 @@ All styles live in `app/globals.css`, ported from the prototype and keyed on pla
 
 ## Assets (`public/`)
 
-- `images/logo.svg` (vector, from `../Archive/V1-yellow-E-transparent.svg`), `images/hero.jpg`, `images/arena.jpg`
-- `media/hero.mp4` (720p, muted, about 1.4 MB)
+- `images/logo.svg` (vector, Esports Trading League lockup L1), `images/hero.jpg`, `images/arena.jpg`
+- `media/hero.mp4` (1080p, muted, about 1.4 MB)
 - `fonts/`: Syne, Inter, JetBrains Mono, plus `archivo-digits.woff2`, which replaces only digits and `$ , . %` so numbers sit at an even height.
 - `app/icon.png` is the browser tab icon.
 
